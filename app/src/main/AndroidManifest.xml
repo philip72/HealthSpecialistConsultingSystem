@@ -22,6 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".specialistLoginActivity">
+
+        </activity>
+        <activity android:name=".specialistSignupActivity">
+
+        </activity>
     </application>
 
 </manifest>

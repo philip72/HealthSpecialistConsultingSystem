@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".specialistSignupActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="318dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/health_specialist_consulting_system"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fullName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/fullName"
+        android:layout_width="358dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="29dp"
+        android:ems="10"
+        android:hint="full name "
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/speciality"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/speciality"
+        android:layout_width="356dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:hint="what is your speciality"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/healthIdNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/healthIdNumber"
+        android:layout_width="354dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:hint="health id Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalOperatingFrom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/hospitalOperatingFrom"
+        android:layout_width="354dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="308dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:hint="hospital operating from"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="352dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="357dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="24dp"
+
+        android:layout_marginTop="540dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:hint="age"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword2"
+        android:layout_width="351dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="452dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="644dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="39dp"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

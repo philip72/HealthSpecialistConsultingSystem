@@ -7,23 +7,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class specialistLoginActivity extends AppCompatActivity  {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_specialist_login);
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
 
 
-        Button specialistButton = (Button) findViewById(R.id.specialistButton);
-        specialistButton.setOnClickListener(view->{
-           Intent intent = new Intent(MainActivity.this, specialistLoginActivity.class);
-           startActivity(intent);
-       });
+        Button signup = (Button) findViewById(R.id.signup);
+        signup.setOnClickListener(view->{
+            Intent intent = new Intent(specialistLoginActivity.this, specialistSignupActivity.class);
+            startActivity(intent);
+        });
     }
+
+
+
 
 
 }
