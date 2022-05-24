@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "304093978693",
+    "project_id": "hscs-37432",
+    "storage_bucket": "hscs-37432.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304093978693:android:4a2b435456a1e818e7032c",
+        "android_client_info": {
+          "package_name": "com.example.healthspecialistconsultingsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304093978693-4ja2udr798id9klbb3f8ho3fcifhaeo1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKbTivy1qbfRByIXofGg_wrSoM1Lg2ZlE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304093978693-4ja2udr798id9klbb3f8ho3fcifhaeo1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
