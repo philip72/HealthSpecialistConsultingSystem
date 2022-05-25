@@ -15,6 +15,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".forgotPassword"
+            android:exported="false" />
+        <activity
             android:name=".specialistUser"
             android:exported="false" />
         <activity
@@ -26,8 +29,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".specialistLoginActivity"></activity>
-        <activity android:name=".specialistSignupActivity"></activity>
+        <activity android:name=".specialistLoginActivity" />
+        <activity android:name=".specialistSignupActivity" />
     </application>
 
 </manifest>

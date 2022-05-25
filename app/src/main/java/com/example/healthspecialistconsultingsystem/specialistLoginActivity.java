@@ -9,12 +9,14 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class specialistLoginActivity extends AppCompatActivity  {
 
@@ -30,11 +32,17 @@ public class specialistLoginActivity extends AppCompatActivity  {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
+        mAuth= FirebaseAuth.getInstance();
 
 
         Button signup = (Button) findViewById(R.id.signup);
         signup.setOnClickListener(view->{
             Intent intent = new Intent(specialistLoginActivity.this, specialistSignupActivity.class);
+            startActivity(intent);
+        });
+        TextView forgotPassword = (TextView)findViewById(R.id.forgotPassword);
+        forgotPassword.setOnClickListener(view->{
+            Intent intent  = new Intent(specialistLoginActivity.this, forgotPassword.class);
             startActivity(intent);
         });
         emailAddress = (EditText) findViewById(R.id.emailAddress);
@@ -67,10 +75,16 @@ public class specialistLoginActivity extends AppCompatActivity  {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    //specialist profile
-                    startActivity(new Intent(specialistLoginActivity.this,specialistUser.class));
+                    FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                    if (firebaseUser.isEmailVerified()){
+                            //specialist profile
+                    startActivity(new Intent(specialistLoginActivity.this,specialistUser.class));}
+                    else {
+                        firebaseUser.sendEmailVerification();
+                        Toast.makeText(specialistLoginActivity.this,"check email to verify",Toast.LENGTH_LONG).show();
+                    }
                 }else{
-                    Toast.makeText(specialistLoginActivity.this, "check your credentials ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(specialistLoginActivity.this, "check your credentials ", Toast.LENGTH_LONG).show();
                 }
 
             }
